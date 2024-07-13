@@ -49,17 +49,14 @@ function UserMenu() {
         open={Boolean(anchorElUser)}
         onClose={handleCloseUserMenu}
       >
+       
+       
         <MenuItem onClick={() => {
                 sessionStorage.removeItem("userInfo");
-              window.location.href =
-`/auth/logout?session_hint=${Cookies.get('session_hint')}`;
+              window.location.href =`/auth/logout?session_hint=${Cookies.get('session_hint')}`;
           }}
 >
             <Typography textAlign="center">My Reservations</Typography>
-            
-          </Button>
-        </MenuItem>
-        <MenuItem>
           <Button style={{ textTransform: "none" }}>
             <Typography textAlign="center">Logout</Typography>
           </Button>
